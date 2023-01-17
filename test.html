@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <script>
+            async function getProfile(){
+                let res;
+                await fetch("profile.php").then(res=>res.json())
+                .then(data=>res=data);
+                return res;
+            }
+            
+            async function loginUser(){
+                let res;
+                await fetch("login.php",{method:"POST",header:{"Content-Type":"application/json"},body:JSON.stringify({email:"tobiphlox@gmail.com",password:"12345678"})}).then(res=>res.json())
+                .then(data=>res=data);
+                return res;
+            }
+            
+            // loginUser().then(data=>{
+            //     console.log(data.msg);
+            //     document.write(data.msg);
+            // })
+            
+            // getProfile().then(data=>{
+            //     if(data.msg==="perfect"){
+            //         console.table(data.data)
+            //     }
+            //     document.write(data.msg);
+            // })
+        </script>
+    </body>
+</html>
