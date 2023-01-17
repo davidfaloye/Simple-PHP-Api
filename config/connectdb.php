@@ -2,9 +2,9 @@
 date_default_timezone_set('Africa/Lagos');
 class DB{
     const HOSTNAME="localhost";
-    const HOSTUSER="bulbflgm_phlox";
-    const HOSTPASSWORD="h?{6ry?@2w57";
-    const HOSTDB="bulbflgm_cloud";
+    const HOSTUSER="host-username";
+    const HOSTPASSWORD="host-password";
+    const HOSTDB="host-database";
     const DENIED="DENIED";
     public static $databasex;//i need to call and use this guy in a function that doesnt inherit this DB class so i have to make it static
                             //generally, static is used when you dont want to have to instantiate a class before accessing its content
